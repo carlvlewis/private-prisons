@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Image Map Sample</title>
+		<style type="text/css">
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			border: 0;
+		}
+		.state-img {
+			visibility: hidden;
+		}
+		</style>
+		<script type="text/javascript">
+		function onOver(event) {
+			var state = (event.target || event.srcElement).className;
+			var elem = document.getElementById(state+"-img");
+			if(elem)
+				elem.style.visibility = "visible";
+		}
+		function onOut(event) {
+			var state = (event.target || event.srcElement).className;
+			var elem = document.getElementById(state+"-img");
+			if(elem)
+				elem.style.visibility = "hidden";
+		}
+		</script>
+		<!--[if lte IE 6]>
+		<style type="text/css">
+		.state-img, #overlay {
+			display: none;
+		}
+		</style>
+		<![endif]-->
+	</head>
+	<body>
+		<map name='map'>
+			<area class='WA' href='WA.html' target='_top' title='Washington'     alt='Washington'     onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='30,12,41,20,51,10,103,24,95,65,38,56,37,48,27,44' />
+			<area class='OR' href='OR.html' target='_top' title='Oregon'         alt='Oregon'         onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='89,91,82,120,9,101,10,89,27,44,38,48,39,57,95,65,98,71,86,88' />
+			<area class='CA' href='CA.html' target='_top' title='California'     alt='California'     onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='89,232,82,252,78,255,51,251,18,215,1,143,1,122,8,101,51,112,41,155,86,221' />
+			<area class='NV' href='NV.html' target='_top' title='Nevada'         alt='Nevada'         onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='41,155,52,112,111,127,97,210,89,208,86,221' />
+			<area class='AK' href='AK.html' target='_top' title='Alaska'         alt='Alaska'         onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='108,362,100,366,90,350,80,343,60,342,56,349,5,350,44,341,29,325,31,307,50,294,65,289,87,301,83,340,95,344' />
+			<area class='HI' href='HI.html' target='_top' title='Hawaii'         alt='Hawaii'         onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='141,327,149,322,177,334,189,348,179,354' />
+			<area class='ID' href='ID.html' target='_top' title='Idaho'          alt='Idaho'          onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='123,75,130,95,148,94,143,132,111,127,82,120,89,91,86,88,98,71,95,65,103,24,112,26,109,40,121,62,118,77' />
+			<area class='MT' href='MT.html' target='_top' title='Montana'        alt='Montana'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='150,90,149,95,130,95,123,75,118,77,121,62,109,40,112,26,165,35,224,42,218,98,205,98' />
+			<area class='WY' href='WY.html' target='_top' title='Wyoming'        alt='Wyoming'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='140,146,143,132,148,95,150,90,205,98,218,98,215,155' />
+			<area class='UT' href='UT.html' target='_top' title='Utah'           alt='Utah'           onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='154,206,99,197,111,127,143,132,140,146,162,149' />
+			<area class='CO' href='CO.html' target='_top' title='Colorado'       alt='Colorado'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='162,149,215,155,235,157,232,213,217,213,154,206' />
+			<area class='AZ' href='AZ.html' target='_top' title='Arizona'        alt='Arizona'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='76,257,82,252,89,232,86,221,89,208,97,210,99,197,154,206,143,285,119,282' />
+			<area class='NM' href='NM.html' target='_top' title='New Mexico'     alt='New Mexico'     onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='143,285,154,206,221,214,215,283,173,279,173,283,154,280,153,286' />
+			<area class='ND' href='ND.html' target='_top' title='North Dakota'   alt='North Dakota'   onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='220,84,224,42,288,46,294,89,249,88' />
+			<area class='SD' href='SD.html' target='_top' title='South Dakota'   alt='South Dakota'   onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='295,122,293,136,286,132,217,127,220,84,249,88,293,89,291,93,295,97' />
+			<area class='NE' href='NE.html' target='_top' title='Nebraska'       alt='Nebraska'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='306,173,234,171,235,157,215,155,217,127,286,132,293,136,299,149,301,163' />
+			<area class='KS' href='KS.html' target='_top' title='Kansas'         alt='Kansas'         onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='232,213,234,171,306,173,315,186,315,215' />
+			<area class='OK' href='OK.html' target='_top' title='Oklahoma'       alt='Oklahoma'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='221,219,221,213,315,215,318,264,308,259,281,261,253,249,254,223' />
+			<area class='TX' href='TX.html' target='_top' title='Texas'          alt='Texas'          onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='308,259,322,265,323,286,329,300,327,318,285,346,283,374,261,367,235,318,220,315,210,328,193,315,192,302,173,283,173,279,215,283,221,219,254,223,253,249,281,261' />
+			<area class='MN' href='MN.html' target='_top' title='Minnesota'      alt='Minnesota'      onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='335,86,330,92,332,105,346,115,348,122,295,123,294,97,291,93,293,89,288,46,307,46,307,39,362,57,336,77' />
+			<area class='IA' href='IA.html' target='_top' title='Iowa'           alt='Iowa'           onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='349,164,301,163,299,149,293,136,295,123,348,122,349,131,361,143,353,152' />
+			<area class='MO' href='MO.html' target='_top' title='Missouri'       alt='Missouri'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='364,187,361,195,375,213,370,228,363,228,366,221,315,223,314,186,306,173,301,163,349,164,349,174,357,184' />
+			<area class='AR' href='AR.html' target='_top' title='Arkansas'       alt='Arkansas'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='357,271,322,272,322,265,317,264,315,223,366,221,363,228,370,228,356,262' />
+			<area class='LA' href='LA.html' target='_top' title='Louisiana'      alt='Louisiana'      onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='381,309,388,327,363,326,327,318,329,300,323,286,322,272,357,271,359,280,352,299,375,298,377,310' />
+			<area class='WI' href='WI.html' target='_top' title='Wisconsin'      alt='Wisconsin'      onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='336,77,335,86,330,92,332,105,346,115,348,122,349,131,353,135,384,134,389,92,381,103,382,88,349,77,350,73' />
+			<area class='MI' href='MI.html' target='_top' title='Michigan'       alt='Michigan'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='379,61,354,78,382,88,382,97,388,89,404,81,409,85,398,98,395,110,400,127,395,143,431,139,439,123,434,103,424,111,427,100,426,90,412,83,422,80,407,70,383,76,380,72,374,72' />
+			<area class='IL' href='IL.html' target='_top' title='Illinois'       alt='Illinois'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='349,164,349,174,357,184,364,187,361,195,375,213,387,204,391,189,388,145,384,134,353,135,361,143,353,152' />
+			<area class='IN' href='IN.html' target='_top' title='Indiana'        alt='Indiana'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='388,145,390,189,388,200,409,195,421,181,417,141,395,143' />
+			<area class='OH' href='OH.html' target='_top' title='Ohio'           alt='Ohio'           onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='417,141,421,178,434,183,442,181,447,185,465,159,461,130,442,142,431,139' />
+			<area class='KY' href='KY.html' target='_top' title='Kentucky'       alt='Kentucky'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='375,220,389,219,389,216,440,212,455,196,451,195,447,190,447,185,442,181,434,183,421,178,421,181,409,195,388,200,387,204,375,213' />
+			<area class='TN' href='TN.html' target='_top' title='Tennessee'      alt='Tennessee'      onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='370,228,365,242,433,236,437,228,456,216,461,209,440,212,389,216,389,219,375,220' />
+			<area class='MS' href='MS.html' target='_top' title='Mississippi'    alt='Mississippi'    onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='359,280,352,299,375,298,377,310,392,306,389,285,390,276,390,240,365,242,356,262,357,271' />
+			<area class='AL' href='AL.html' target='_top' title='Alabama'        alt='Alabama'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='390,240,390,276,389,285,392,308,406,306,401,296,432,293,430,274,418,237' />
+			<area class='GA' href='GA.html' target='_top' title='Georgia'        alt='Georgia'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='446,235,418,237,430,274,433,297,469,296,468,291,474,291,478,272,471,261,446,239' />
+			<area class='FL' href='FL.html' target='_top' title='Florida'        alt='Florida'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='433,297,432,293,401,296,406,306,419,304,432,313,446,304,464,319,463,334,491,368,502,367,503,344,474,291,468,291,469,296' />
+			<area class='NY' href='NY.html' target='_top' title='New York'       alt='New York'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='521,128,532,132,530,138,544,134,553,125,548,125,535,131,531,96,528,94,524,75,509,78,498,93,499,101,493,107,472,109,474,117,468,125,468,131,515,121' />
+			<area class='PA' href='PA.html' target='_top' title='Pennsylvania'   alt='Pennsylvania'   onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='468,131,468,125,461,130,466,163,519,153,525,145,519,139,521,128,515,121' />
+			<area class='NJ' href='NJ.html' target='_top' title='New Jersey'     alt='New Jersey'     onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='519,139,525,145,519,153,520,157,528,163,534,151,534,141,530,138,532,132,521,128' />
+			<area class='WV' href='WV.html' target='_top' title='West Virginia'  alt='West Virginia'  onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='466,163,465,159,447,185,447,190,451,195,454,196,459,201,473,195,477,178,482,179,491,164,496,166,497,163,491,159,478,168,477,161' />
+			<area class='MD' href='MD.html' target='_top' title='Maryland'       alt='Maryland'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='477,161,478,168,491,159,504,168,503,175,520,180,521,191,529,170,520,171,516,154' />
+			<area class='VA' href='VA.html' target='_top' title='Virginia'       alt='Virginia'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='482,179,477,178,473,195,459,201,455,196,440,212,475,207,524,198,517,180,503,175,504,168,497,163,496,166,491,164' />
+			<area class='NC' href='NC.html' target='_top' title='North Carolina' alt='North Carolina' onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='437,228,433,236,446,235,467,228,474,232,486,231,506,244,536,213,523,198,475,207,461,209,456,216' />
+			<area class='SC' href='SC.html' target='_top' title='South Carolina' alt='South Carolina' onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='467,228,446,235,446,239,471,261,480,272,504,243,486,231,474,232' />
+			<area class='DE' href='DE.html' target='_top' title='Delaware'       alt='Delaware'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='516,154,520,171,530,170,529,164,520,157,519,153' />
+			<area class='VT' href='VT.html' target='_top' title='Vermont'        alt='Vermont'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='524,74,528,94,531,96,532,105,539,104,539,82,542,77,541,70' />
+			<area class='NH' href='NH.html' target='_top' title='New Hampshire'  alt='New Hampshire'  onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='541,66,542,77,539,82,539,104,552,101,557,97,551,87,546,65' />
+			<area class='CT' href='CT.html' target='_top' title='Connecticut'    alt='Connecticut'    onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='533,116,549,112,551,123,535,131' />
+			<area class='RI' href='RI.html' target='_top' title='Rhode Island'   alt='Rhode Island'   onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='549,112,551,124,561,119,554,110' />
+			<area class='MA' href='MA.html' target='_top' title='Massachusetts'  alt='Massachusetts'  onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='532,105,533,116,554,110,562,120,574,119,569,105,557,97,552,101' />
+			<area class='ME' href='ME.html' target='_top' title='Maine'          alt='Maine'          onmouseover='onOver(event)' onmouseout='onOut(event)' shape='polygon' coords='552,30,548,47,546,65,551,87,557,97,562,85,589,61,575,49,568,29' />
+
+			<area class='NH' href='NH.html' target='_top' title='New Hampshire'  alt='New Hampshire'  onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='489,40,549,50' />
+			<area class='VT' href='VT.html' target='_top' title='Vermont'        alt='Vermont'        onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='502,51,536,61' />
+			<area class='MA' href='MA.html' target='_top' title='Massachusetts'  alt='Massachusetts'  onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='568,102,588,112' />
+			<area class='RI' href='RI.html' target='_top' title='Rhode Island'   alt='Rhode Island'   onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='551,136,590,146' />
+			<area class='CT' href='CT.html' target='_top' title='Connecticut'    alt='Connecticut'    onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='540,146,586,156' />
+			<area class='NJ' href='NJ.html' target='_top' title='New Jersey'     alt='New Jersey'     onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='538,157,581,167' />
+			<area class='DE' href='DE.html' target='_top' title='Delaware'       alt='Delaware'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='538,168,577,178' />
+			<area class='MD' href='MD.html' target='_top' title='Maryland'       alt='Maryland'       onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='538,180,574,190' />
+			<area class='HI' href='HI.html' target='_top' title='Hawaii'         alt='Hawaii'         onmouseover='onOver(event)' onmouseout='onOut(event)' shape='rect' coords='142,343,171,353' />
+		</map>
+	</body>
+	<img src="http://static.prisonersofthecensus.org/50states/map.png" alt="Map of the United States" width="590" height="380" usemap="#map" />
+
+	<img src="http://static.prisonersofthecensus.org/50states/hot/WA.png" alt='Washington'     id="WA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/OR.png" alt='Oregon'         id="OR-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/CA.png" alt='California'     id="CA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/NV.png" alt='Nevada'         id="NV-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/AK.png" alt='Alaska'         id="AK-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/HI.png" alt='Hawaii'         id="HI-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/ID.png" alt='Idaho'          id="ID-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/MT.png" alt='Montana'        id="MT-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/WY.png" alt='Wyoming'        id="WY-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/UT.png" alt='Utah'           id="UT-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/CO.png" alt='Colorado'       id="CO-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/AZ.png" alt='Arizona'        id="AZ-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/NM.png" alt='New Mexico'     id="NM-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/ND.png" alt='North Dakota'   id="ND-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/SD.png" alt='South Dakota'   id="SD-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/NE.png" alt='Nebraska'       id="NE-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/KS.png" alt='Kansas'         id="KS-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/OK.png" alt='Oklahoma'       id="OK-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/TX.png" alt='Texas'          id="TX-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/MN.png" alt='Minnesota'      id="MN-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/IA.png" alt='Iowa'           id="IA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/MO.png" alt='Missouri'       id="MO-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/AR.png" alt='Arkansas'       id="AR-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/LA.png" alt='Louisiana'      id="LA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/WI.png" alt='Wisconsin'      id="WI-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/MI.png" alt='Michigan'       id="MI-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/IL.png" alt='Illinois'       id="IL-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/IN.png" alt='Indiana'        id="IN-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/OH.png" alt='Ohio'           id="OH-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/KY.png" alt='Kentucky'       id="KY-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/TN.png" alt='Tennessee'      id="TN-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/MS.png" alt='Mississippi'    id="MS-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/AL.png" alt='Alabama'        id="AL-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/GA.png" alt='Georgia'        id="GA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/FL.png" alt='Florida'        id="FL-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/NY.png" alt='New York'       id="NY-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/PA.png" alt='Pennsylvania'   id="PA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/NJ.png" alt='New Jersey'     id="NJ-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/WV.png" alt='West Virginia'  id="WV-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/MD.png" alt='Maryland'       id="MD-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/VA.png" alt='Virginia'       id="VA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/NC.png" alt='North Carolina' id="NC-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/SC.png" alt='South Carolina' id="SC-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/DE.png" alt='Delaware'       id="DE-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/VT.png" alt='Vermont'        id="VT-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/NH.png" alt='New Hampshire'  id="NH-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/CT.png" alt='Connecticut'    id="CT-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/RI.png" alt='Rhode Island'   id="RI-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/MA.png" alt='Massachusetts'  id="MA-img" class="state-img" />
+	<img src="http://static.prisonersofthecensus.org/50states/hot/ME.png" alt='Maine'          id="ME-img" class="state-img" />
+
+	<img src="http://static.prisonersofthecensus.org/50states/overlay.png" id="overlay" alt="nothingness" width="590" height="380" usemap="#map"/>
+</html>

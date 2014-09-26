@@ -1,91 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
-    <!--Edit the title of the page-->
-    <title>U.S. Private Prisons by Owner and State Incarceration Rate, 2012</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+
+    <title>Vocativ - Special Feature: Private Prisons, Public Dollars</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,300" rel='stylesheet' type='text/css'>
     <![endif]-->
-    <link rel="stylesheet" href="css/makeitresponsive.css">
-    <!--Switch between the different themes changing the stylesheet below - light-theme.css |dark-theme.css -->
-    <link rel="stylesheet" href="css/light-theme.css">
-    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    
-    <div class="row">
-      <div class="col span4 empty"><p></p></div>
-      <div class="col span12 context subheader">
-        <!--Link to your personal website, your blog or your twitter account-->
-        <div><p>Map created by <a href="http://carlvlewis.net">Carl V. Lewis</a> ● Jul. 16, 2014
-        
+<script type="text/javascript" src="http://fast.fonts.net/jsapi/46a5e975-4866-4c11-9307-3be29f5e6289.js"></script>
+</head>
 
-      </div>
-    </div>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+           
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href=""><img src="http://i.imgur.com/lvmAUhT.png"></img></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">VIDEO</a>
+                    </li>
+                    <li>
+                        <a href="#">USA</a>
+                    </li>
+                    <li>
+                        <a href="#">WORLD</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-    <!--In the paragraph below give an introduction to your visualization-->
-    <div class="row">
-      <div class="col span4 empty"><p></p></div>
-      <div class="col span12">
-        <h1>U.S. Private Prisons by Owner and State Incarceration Rate, 2012</h1>
-        <p>While much of the national debate over the mass privatization of state and federal prison systems in recent years has focused on <a href="http://www.nytimes.com/2011/05/19/us/19prisons.html?pagewanted=all&_r=0">cost per inmate</a> – whether private prisons save public funds or are costing taxpayers more – few mainstream narratives have surfaced concerning other, less quantifiable effects of prison privitization.  For example, a helpful start might be to see if any correlation exists between incarceration rates in areas with private prisons and areas with public prisons.<a href=''> As it turns out, <a href="http://www.motherjones.com/mojo/2013/09/private-prisons-occupancy-quota-cca-crime">five companies alone</a> have a monopoly on the private prison industry, each raking in millions of dollars of annual revenue in the business of incarceration.</p>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="map" id="map"></div>
-    </div>
+    <!-- Page Content -->
+    <div class="container">
 
-    <!--Copy and paste the "row" div below a second, third, or fourth time to create content blocks-->
-    <div class="row">
-      <div class="col span4 titleBlock">
-        <h3>Description</h3>
-      </div>
-      <div class="col span12">
-        <p>The map above visualizes two different datasets – 2012 incarceration rates by state and the locations and owners of all 137 private prisons nationwide. A preliminary analysis of these two variables taken together would, in fact, lend credence to the claim that private prisons incarcerate more people on average than their public counterparts do, presumably because they have a greater financial incentive to keep prisoner occupancy rates high. <em>Zoom in to the map to  the regions with the highest density of locations. What do you notice about those states?</p></em>
-      </div>
-    </div>
-
-    <!--This is an example of a second content block-->
-    <div class="row">
-      <div class="col span4 titleBlock">
-        <h3>Sources</h3>
-      </div>
-      <div class="col span12">
-        <li><p>Bureau of Justice Statistics, <a href="http://www.bjs.gov/index.cfm?ty=tp&tid=133">"Correctional Populations in the United States, 2012." </a>(<a href="http://www.bjs.gov/content/pub/sheets/cpus12.zip">csv</a>)</p>
-        </li><li>        <p>U.S. Census Bureau, <a href="http://census.gov">2012 Population Estimates.</a></p></li><li><p>Enigma.io, Prison Facilties. (<a href="https://www.dropbox.com/s/arkyewfj6z5psa6/enigma-enigma-prisons-all-facilities-7215ee9c7d9dc229d2921a40e899ec5f%20%281%2906.03.01%20AM.csv">csv</a>)</p></li></div>
+        <!-- Page Heading -->
         <div class="row">
-      <div class="col span4 titleBlock">
-        <h3>Methodology</h3> </div>
-        <div class="col span12">
-<p>Available on my blog <a href="http://carlvlewis.net/using-cartodb-2-0-geocode-private-prisons-comparison-state-state-incarceration-rates/">here.</a></p>
-        </div></div>
-        <div style="float: right"><table><tr><td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://carlvlewis.net/private-prisons"  >Tweet</a><script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script></td><td><div class="g-plusone" data-size="medium"   data-href="http://carlvlewis.net/private-prisons"></div><script type="text/javascript">(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script></td><td><iframe src="//www.facebook.com/plugins/like.php?href=http://carlvlewis.net/private-prisons&send=false&layout=button_count&width=120&show_faces=true&font&colorscheme=light&action=like&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:20px;" allowTransparency="true"></iframe></td></tr></table></p></div>
-      </div>
+            <div class="col-lg-12">
+                <h1 class="page-header">INTERACTIVE: PRIVATE PRISONS, PUBLIC DOLLARS</h1><h2>How the U.S. Got Locked Up In the Shady Business of Mass Incarceration [ ] A VOCATIV SPECIAL INVESTIGATION</br>
+                </h2>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://i.imgur.com/RbDMBgG.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3> Incarceration Skyrockets, Even As Crime, Arrest Rates Steady, Fall</h3>
+                <h4>Tracing a Correlation Between Private Prisons and the Mass Incarceration Crisis</h4>
+                <p>Kitty ipsum dolor sit amet, puking lay down in your way catnip kittens leap puking, hairball attack your ankles sleep on your face sleep on your face chuf. Claw sleep in the sink eat tail flick meow judging you, feed me climb the curtains scratched give me fish.</p>
+                <a class="btn btn-primary" href="#">View Full Story<span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Two</h3>
+                <h4>Subheading</h4>
+                <p>Meow toss the mousie toss the mousie chase the red dot hairball fluffy fur, bat run sleep on your face kittens. Stretching attack your ankles tail flick toss the mousie, knock over the lamp lay down in your way bat attack purr jump on the table.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Three</h3>
+                <h4>Subheading</h4>
+                <p>Meow toss the mousie toss the mousie chase the red dot hairball fluffy fur, bat run sleep on your face kittens. Stretching attack your ankles tail flick toss the mousie, knock over the lamp lay down in your way bat attack purr jump on the table.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Four</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Five -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Five</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+      
+            </div>
+              <div class="text-center center-block">
+            <p class="txt-railway">- Share this Series -</p>
+            <br />
+                <a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x"></i></a>
+                <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x"></i></a>
+                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x"></i></a>
+                <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x"></i></a>
+</div>
+    <hr>
+</div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Vocativ, L.L.C. 2014</p> Interactives and Data Analysis: Carl V. Lewis. Reporting by: XXX XXXX.  
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
     </div>
+    <!-- /.container -->
 
-    <!--Play fair and keep the attributions. If you do, we will love you even more. :)-->
-    <div class="row">
-      <div class="col span4 empty"><p></p></div>
-      <div class="col span12 context footer">
-     Built by <a href="http://carlvlewis.net">@carlvlewis</a> with spreadsheets, geocoders, JavaScript, CartoDB and love. <a href="http://carlvlewis.net">See more like this on my blog.</a>
-      </div>
-    </div>
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&v=3.8"></script>
-    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
-    <!--Change the URL below in order to change the map that is being shown.
-        Go to your map in CartoDB, click on share, and copy the URL under the API section
-        Check the cartodb.js documentation for more info
-        http://developers.cartodb.com/documentation/cartodb-js.html-->
-    <script type="text/javascript"> 
-      cartodb.createVis('map', 'http://carlvlewis.cartodb.com/api/v2/viz/d785d444-0cb0-11e4-b8bc-0e230854a1cb/viz.json');
-    </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-  </body>
+</body>
+
 </html>
